@@ -1,4 +1,4 @@
-import hello
+import sort_from_files
 
 def sort(str, memory):
     i = 0
@@ -20,7 +20,7 @@ def sort(str, memory):
             create_file(str[i:i + memory / 2], j)
         i += memory / 2
         j += 1
-    str = hello.create_string_from_fileschar(j)
+    str = sort_from_files.create_string_from_files(j)
     return str
 
 
@@ -80,5 +80,4 @@ def create_string_from_files(count):
 
 if __name__ == '__main__':
     line = "casnbfghfhg"
-    print sort(line, 20)
-
+    print sort(line)

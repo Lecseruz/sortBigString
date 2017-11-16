@@ -18,7 +18,9 @@ bool operator < (const Inp& inp_1, const Inp& inp_2)
 }
 
 
-std::string create_string_from_fileschar(int count)
+
+
+std::string create_string_from_files(int count)
 {
     std::priority_queue<Inp> PriQue;
     char value;
@@ -54,9 +56,9 @@ std::string create_string_from_fileschar(int count)
 }
 
 
-BOOST_PYTHON_MODULE(hello)
+BOOST_PYTHON_MODULE(sort_from_files)
 {
     using namespace boost::python;
-    def("create_string_from_fileschar", create_string_from_fileschar);
+    def("create_string_from_files", create_string_from_files);
     class_<Inp>("Inp");
 }
